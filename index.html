@@ -437,10 +437,53 @@
           </use>
         </svg>
       </button>
+
+      <form class="hero-form js-speaker-form" autocomplete="off">
+        <p class="title-form">Оставьте свои данные, мы вам перезвоним</p>
+
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" autofocus/>
+
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel">
+
+        <label for="mail">Почта</label>
+        <input type="email" name="mail" id="mail">
+
+  
+
+        <label for="comment">Комментарий</label>
+        <textarea name="comment" id="comment"></textarea>
+
+        <button type="submit">Отправить</button>
+
+        
+
+
+      </form>
+
+      
+
     </div>
   </div>
 
   <script src="./modal.js"></script>
+
+  <script>
+    (() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+    })();
+  </script>
 
 </body>
 
