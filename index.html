@@ -441,28 +441,49 @@
       <form class="hero-form js-speaker-form" autocomplete="off">
         <p class="title-form">Оставьте свои данные, мы вам перезвоним</p>
 
-        <label for="name">Имя</label>
-        <input type="text" name="name" id="name" autofocus/>
+        <label class="form-element">
+          <span class="form-label">Имя</span>
+          <input type="text" class="form-input" name="name" autofocus />
+          <svg class="form-icon" width="18px" height="18px">
+            <use href="./image/icons.svg#icon-person">
+            </use>
+          </svg>
+        </label>
 
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel">
+        <label class="form-element">
+          <span class="form-label">Телефон</span>
+          <input type="tel" class="form-input" name="tel">
+          <svg class="form-icon" width="18px" height="18px">
+            <use href="./image/icons.svg#icon-phone">
+            </use>
+          </svg>
+        </label>
 
-        <label for="mail">Почта</label>
-        <input type="email" name="mail" id="mail">
+        <label class="form-element">
+          <span class="form-label">Почта</span>
+          <input type="email" class="form-input" name="mail">
+          <svg class="form-icon" width="18px" height="18px">
+            <use href="./image/icons.svg#icon-mail">
+            </use>
+          </svg>
 
-  
+        </label>
 
-        <label for="comment">Комментарий</label>
-        <textarea name="comment" id="comment"></textarea>
+
+
+        <label for="form-element">
+          <span class="form-label">Комментарий</span>
+          <textarea class="comment" name="comment"></textarea>
+        </label>  
 
         <button type="submit">Отправить</button>
 
-        
+
 
 
       </form>
 
-      
+
 
     </div>
   </div>

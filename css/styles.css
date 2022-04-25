@@ -663,7 +663,7 @@ body {
   border: 0px;
 }
 
-.hero-form{
+.hero-form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -671,6 +671,61 @@ body {
   margin: 40px 40px;
 }
 
-textarea{
+.comment {
   resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.title-form {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--additional-color);
+}
+
+.form-input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-element {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+}
+
+.form-element:focus-within > .form-input {
+  border-color: var(--focus-color);
+}
+
+.form-element:focus-within > .form-icon {
+  fill: var(--focus-color);
+}
+
+.comment:focus-within {
+  border-color: var(--focus-color);
 }
