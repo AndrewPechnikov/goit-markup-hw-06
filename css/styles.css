@@ -289,7 +289,6 @@ input {
   padding-top: 27px;
   padding-bottom: 27px;
 
-  /* Здається не збігається з макетом */
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -522,8 +521,6 @@ input {
 }
 
 .portfolio.list .item:hover .overlay {
-  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16); */
   transform: translateY(0%);
 }
 
@@ -652,20 +649,26 @@ input {
 
 .close-button {
   position: absolute;
-  right: 8px;
   top: 8px;
-  cursor: pointer;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  fill: #000;
 
   padding: 0;
-  height: 30px;
-  border-radius: 15px;
 
-  background-color: #ffffff;
-  border: 0px;
-  fill: black;
+  justify-content: center;
+  align-items: center;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:hover{
+.close-button:hover {
   fill: var(--focus-color);
 }
 
@@ -692,7 +695,6 @@ input {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .comment::placeholder {
   font-weight: 400;
@@ -781,8 +783,6 @@ input {
   background-position: center;
 }
 
-
-
 .checkbox:checked + .icon {
   background-image: url('../image/checkboxChecked.svg');
 }
@@ -797,7 +797,6 @@ input {
   line-height: 1.71;
   letter-spacing: 0.01em;
 }
-
 
 .chekbox-conditions {
   color: var(--focus-color);
@@ -823,15 +822,12 @@ input {
   cursor: pointer;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  
 }
 
-.hero-form button:hover, .hero-form button:focus{
+.hero-form button:hover,
+.hero-form button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-
 
 .footer-form {
   display: flex;
